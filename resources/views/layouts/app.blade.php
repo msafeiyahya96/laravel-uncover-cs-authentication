@@ -43,6 +43,9 @@
                             <li class="nav-item">
                                 <a href="{{ url('/blog-mahasiswa') }}" class="nav-link">Blog Mahasiswa</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ url('/') }}" class="nav-link">Tabel Jurusan</a>
+                            </li>
                         @endauth
                     </ul>
 
