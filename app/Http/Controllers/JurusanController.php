@@ -38,12 +38,20 @@ class JurusanController extends Controller
 
     public function edit(Jurusan $jurusan)
     {
-        //
+        return view('jurusan.edit', compact('jurusan'));
     }
 
     public function update(Request $request, Jurusan $jurusan)
     {
-        //
+        $validateData   = $request->validate([
+            'nama_jurusan'    => 'required',
+            'nama_dekan'        => 'required',
+            'jumlah_mahasiswa'  => 'required|min:10|integer',
+        ]);
+
+        $jurusan->update($validateData);
+
+        return redirect('/jurusans/' . $jurusan->id)->with('pesan', "Jurusan $jurusan->nama_jurusan berhasil di update.");
     }
 
     public function destroy(Jurusan $jurusan)
