@@ -7,7 +7,7 @@
                 <div class="pt-4 d-flex justify-content-end align-items-center">
                     <h1 class="h2 me-auto">Info Jurusan {{ $jurusan->nama_jurusan }}</h1>
                     <a href="{{ url('/jurusans/' . $jurusan->id . '/edit') }}" class="btn btn-primary">Edit</a>
-                    <form action="#" method="post">
+                    <form action="{{ url('/jurusans/' . $jurusan->id) }}" method="post">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger ms-3">Hapus</button>

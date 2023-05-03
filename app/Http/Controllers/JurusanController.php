@@ -56,6 +56,7 @@ class JurusanController extends Controller
 
     public function destroy(Jurusan $jurusan)
     {
-        //
+        $jurusan->delete();
+        return redirect('/')->with('pesan', "Jurusan $jurusan->nama_jurusan berhasil di hapus.");
     }
 }
