@@ -46,6 +46,9 @@
                             <li class="nav-item">
                                 <a href="{{ url('/') }}" class="nav-link">Tabel Jurusan</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ url('/jurusans/create') }}" class="nav-link">Tambah Jurusan</a>
+                            </li>
                         @endauth
                     </ul>
 

@@ -15,12 +15,20 @@ class JurusanController extends Controller
 
     public function create()
     {
-        // 
+        return view('jurusan.create');
     }
 
     public function store(Request $request)
     {
-        //
+        $validateData   = $request->validate([
+            'nama_jurusan'      => 'required',
+            'nama_dekan'        => 'required',
+            'jumlah_mahasiswa'  => 'required|min:10|integer',
+        ]);
+
+        Jurusan::create($validateData);
+        
+        return redirect('/')->with('pesan', "Jurusan $request->nama_jurusan berhasil ditambahkan.");
     }
 
     public function show(Jurusan $jurusan)

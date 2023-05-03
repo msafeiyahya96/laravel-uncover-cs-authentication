@@ -6,8 +6,14 @@
             <div class="col-12">
                 <div class="py-4 d-flex justify-content-end align-items-center">
                     <h1 class="h2 me-auto">Tabel Jurusan</h1>
-                    <a href="#" class="btn btn-primary">Tambah Jurusan</a>
+                    <a href="{{ url('/jurusans/create') }}" class="btn btn-primary">Tambah Jurusan</a>
                 </div>
+
+                @if (session()->has('pesan'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session()->get('pesan') }}
+                    </div>
+                @endif
 
                 <table class="table table-striped">
                     <thead>
