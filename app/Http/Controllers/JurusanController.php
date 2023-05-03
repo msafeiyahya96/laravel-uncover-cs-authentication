@@ -33,7 +33,7 @@ class JurusanController extends Controller
 
     public function show(Jurusan $jurusan)
     {
-        //
+        return view('jurusan.show', compact('jurusan'));
     }
 
     public function edit(Jurusan $jurusan)

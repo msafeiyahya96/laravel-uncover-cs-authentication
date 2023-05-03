@@ -29,7 +29,7 @@
                             <tr>
                                 <th>{{ $loop->iteration }}</th>
                                 <td>
-                                    <a href="#">
+                                    <a href="{{ url('/jurusans/' . $jurusan->id) }}">
                                         {{ $jurusan->nama_jurusan }}
                                     </a>
                                 </td>
